@@ -22,13 +22,26 @@
     @media screen and (min-width: 1200px) {
         display: flex;
     }
+
 }
+
+
 
 .info-list {
     justify-content: center;
 }
 
+.info-address{
+    &:hover,
+    &:focus {
+    color: var(--accent--color);
+}
+}
 
+.info-mail:hover,
+.info-mail:focus{
+color: var(--accent--color);
+}
 
 .footer__container {
     @media screen and (min-width: 1200px) {
@@ -37,7 +50,7 @@
 
 }
 
-.footer-title {
+.invitation-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -57,7 +70,7 @@
     }
 }
 
-.footer-soc {
+.invitation-link {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -108,6 +121,8 @@
 
 .footer-letter-mail {
     width: 100%;
+    padding-left: 16px;
+
 
     @media screen and (min-width: 768px) {
         width: 450px;
@@ -129,7 +144,7 @@
     margin-bottom: 20px;
 
     &::placeholder {
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        color: rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -156,13 +171,30 @@
 }
 
 .btn-footer-text {
+    display: flex;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;
-    align-items: center;
+    line-height: calc(30/16);
     text-align: center;
+    align-items: center;
+    justify-content: center;
     letter-spacing: 0.06em;
-    color: #ffffff;
+    min-width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #2196F3;
+    border: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+&:hover,
+&:focus{
+    background-color: #188CE8;
+}
 }
 
 .container-tablet {
@@ -179,7 +211,7 @@
     }
 }
 
-.flecsy {
+.container-cont-bottom{
     @media screen and (min-width: 768px) {
         display: block;
     }
@@ -192,7 +224,7 @@
 
 }
 
-.footer-continer {
+.invitation {
     display: block;
     margin-top: 60px;
 

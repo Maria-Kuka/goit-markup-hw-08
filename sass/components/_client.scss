@@ -62,8 +62,8 @@
     fill: #afb1b8;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .client-soc-link:hover &,
-    .client-soc-link:focus & {
+    .clients__icon:hover &,
+    .clients__icon:focus & {
         fill: #2196f3;
     }
 }

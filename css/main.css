@@ -254,6 +254,7 @@ body {
 }
 
 .check-polyci {
+  margin-left: 5px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -626,7 +627,7 @@ body {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-soc-link:hover .clients__img, .client-soc-link:focus .clients__img {
+.clients__icon:hover .clients__img, .clients__icon:focus .clients__img {
   fill: #2196f3;
 }
 
@@ -748,13 +749,22 @@ body {
   justify-content: center;
 }
 
+.info-address:hover, .info-address:focus {
+  color: var(--accent--color);
+}
+
+.info-mail:hover,
+.info-mail:focus {
+  color: var(--accent--color);
+}
+
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
   }
 }
 
-.footer-title {
+.invitation-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -765,18 +775,18 @@ body {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .footer-title {
+  .invitation-title {
     margin-top: 0;
     text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-title {
+  .invitation-title {
     text-align: start;
   }
 }
 
-.footer-soc {
+.invitation-link {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -823,6 +833,7 @@ body {
 
 .footer-letter-mail {
   width: 100%;
+  padding-left: 16px;
   height: 50px;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -845,13 +856,13 @@ body {
   }
 }
 .footer-letter-mail::-moz-placeholder {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer-letter-mail:-ms-input-placeholder {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer-letter-mail::placeholder {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .sent-letter {
@@ -877,13 +888,29 @@ body {
 }
 
 .btn-footer-text {
+  display: flex;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
+  line-height: 1.875;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  min-width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: #2196F3;
+  border: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-footer-text:hover, .btn-footer-text:focus {
+  background-color: #188CE8;
 }
 
 .container-tablet {
@@ -903,30 +930,30 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .flecsy {
+  .container-cont-bottom {
     display: block;
   }
 }
 @media screen and (min-width: 1200px) {
-  .flecsy {
+  .container-cont-bottom {
     display: block;
     margin-right: 70px;
     margin-left: 0;
   }
 }
 
-.footer-continer {
+.invitation {
   display: block;
   margin-top: 60px;
 }
 @media screen and (min-width: 768px) {
-  .footer-continer {
+  .invitation {
     display: block;
     margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-continer {
+  .invitation {
     display: block;
     margin-left: 0;
   }
@@ -1031,41 +1058,41 @@ body {
   flex-direction: column;
 }
 
-.filter-btn {
+.btn-port {
+  margin-left: 8px;
+  padding: 6px 22px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.65;
-  text-align: center;
+  line-height: 1.625;
   letter-spacing: 0.03em;
-  color: var(--main--color);
-  background-color: #f5f4fa;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
-  border-radius: 4px;
-  padding: 6px 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-btn:hover, .filter-btn:focus {
-  color: var(--third--color);
+.btn-port:hover, .btn-port:focus {
   background-color: var(--accent--color);
+  color: var(--third--color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.work-link-asd {
+.projects {
   height: 100%;
   display: grid;
   flex-direction: column;
 }
-.work-link-asd:hover, .work-link-asd:focus {
+.projects:hover, .projects:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.work-link {
+.team-thumb {
   position: relative;
   overflow: hidden;
 }
 
-.work-top-text {
+.thumb-text {
   position: absolute;
   top: 0;
   font-size: 18px;
@@ -1078,11 +1105,11 @@ body {
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.work-link-asd:hover .work-top-text, .work-link-asd:focus .work-top-text {
+.projects:hover .thumb-text, .projects:focus .thumb-text {
   transform: translateY(0);
 }
 
-.work-item {
+.gallery-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -1093,21 +1120,21 @@ body {
   margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
-  .work-item {
+  .gallery-list {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .work-item {
+  .gallery-list {
     margin-top: 50px;
   }
 }
 
-.work-item.work-list:nth-last-child(-n+3) {
+.work-item.gallery-item:nth-last-child(-n+3) {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-title {
+.project-list {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1116,7 +1143,7 @@ body {
   margin-bottom: 4px;
 }
 
-.work-data {
+.project-desk {
   padding: 20px 24px 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1124,7 +1151,7 @@ body {
   flex-grow: 1;
 }
 
-.work-pre-title {
+.project-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -1140,21 +1167,21 @@ body {
   margin-bottom: 9px;
 }
 
-.work-list {
+.gallery-item {
   width: 100%;
 }
 @media screen and (min-width: 480px) {
-  .work-list {
+  .gallery-item {
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .work-list {
+  .gallery-item {
     width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  .work-list {
+  .gallery-item {
     width: calc((100% - 60px) / 3);
   }
 }

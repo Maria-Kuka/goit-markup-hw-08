@@ -15,31 +15,30 @@
     flex-direction: column;
 }
 
-.filter-btn {
+.btn-port {
+    margin-left: 8px;
+    padding: 6px 22px;
+    border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.65;
-    text-align: center;
+    line-height: calc(26/16);
     letter-spacing: 0.03em;
-    color: var(--main--color);
-    background-color: #f5f4fa;
-    border: none;
+    
+    border-color: transparent;
     cursor: pointer;
-    border-radius: 4px;
-    padding: 6px 22px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
-        color: var(--third--color);
-        background-color: var(--accent--color);
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
+    background-color: var(--accent--color);
+    color: var(--third--color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 }
 
-.work-link-asd {
+.projects {
     height: 100%;
     display: grid;
     flex-direction: column;
@@ -51,12 +50,12 @@
     }
 }
 
-.work-link {
+.team-thumb {
     position: relative;
     overflow: hidden;
 }
 
-.work-top-text {
+.thumb-text {
     position: absolute;
     top: 0;
     font-size: 18px;
@@ -69,13 +68,13 @@
     transform: translateY(100%);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .work-link-asd:hover &,
-    .work-link-asd:focus & {
+    .projects:hover &,
+    .projects:focus & {
         transform: translateY(0);
     }
 }
 
-.work-item {
+.gallery-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -94,11 +93,11 @@
     }
 }
 
-.work-item.work-list:nth-last-child(-n+3) {
+.work-item.gallery-item:nth-last-child(-n+3) {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-title {
+.project-list {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -107,7 +106,7 @@
     margin-bottom: 4px;
 }
 
-.work-data {
+.project-desk {
     padding: 20px 24px 20px 24px;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
@@ -115,7 +114,7 @@
     flex-grow: 1;
 }
 
-.work-pre-title {
+.project-text{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
@@ -132,7 +131,7 @@
     margin-bottom: 9px;
 }
 
-.work-list {
+.gallery-item {
     width: 100%;
 
     @media screen and (min-width: 480px) {
