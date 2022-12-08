@@ -278,13 +278,13 @@ body {
   }
 }
 
-.page-header {
+.header {
   border-bottom: 1px solid silver;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (max-width: 767px) {
-  .page-header {
+  .header {
     padding-top: 16px;
     padding-bottom: 16px;
   }
